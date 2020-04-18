@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>DHBW Redirect</title>
+		<meta name="Nickels Witte" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Load the custom style -->
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- Favicon is important -->
+		<link rel="shortcut icon" href="../img/favicon.ico">
+
+		<link rel="icon" type="image/png" href="../img/favicon.ico" sizes="32x32">
+		<link rel="icon" type="image/png" href="../img/favicon.ico" sizes="96x96">
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="../lib/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+
+
+
+	</head>
+
+	<body>
+
+		<div class="container">
+			<h1 class="text-center">DHBW Redirect</h1>
+
+			<p id="pText" class="text-center"></p>
+
+			<!-- Loading animation -->
+			<div class="d-flex justify-content-center">
+				<div class="spinner-border" role="status">
+					<span class="sr-only">Loading...</span>
+				</div>
+			</div>
+		</div>
+
+		
+		
+
+		<!-- Load the rapla utils with the link builder -->
+		<script src="../js/rapla_utils.js"></script>
+
+		<!-- Get the course from GET and call the redirect function -->
+		<script>
+
+			// Get the GET values. substring 1 removes the questionmark
+			var getString = window.location.search.substr(1);
+			// Split it into key value pairs
+			var parts = getString.split("&");
+			// Get the first pair as two elements
+			var first = parts[0].split("=");
+
+			var course = "";
+
+			// Set the value to the variable course
+			if (first[0] === "course") {
+				course = first[1];
+			}
+
+			// Do the text
+			var text = document.getElementById("pText");
+			text.innerHTML = "Diese Seite sollte dich in kurzer Zeit zur aktuellen Woche des " + course + " Kalenders weiterleiten.";
+
+			raplaRedirect(course);
+
+
+		</script>
+
+	</body>
+
+</html>

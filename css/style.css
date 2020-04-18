@@ -1,0 +1,51 @@
+html, body {
+    height: 100%;
+}
+
+
+.mainBody {
+
+    padding-bottom: 20px;
+}
+
+#container {
+    padding-top: 20px;
+}
+
+.aLittleMarginBottom {
+    margin-bottom: 1rem;
+}
+
+.testClass {
+    max-width: 100%;
+    height: auto;
+}
+
+.sketchControlDiv > * {
+    /* This will space the children */
+    margin: 0 1.5rem 0 0;
+}
+
+.sketchControlDiv > p {
+    white-space: nowrap;
+}
+
+.sketchControlDiv > div > label {
+    margin-left: 0.33rem;
+}
+
+.sketchControl {
+    
+}
+
+.delink {
+    color: #212529;
+}
+
+.delink:hover {
+    color: #212529;
+}
+
+#headingOne {
+    cursor: pointer;
+}

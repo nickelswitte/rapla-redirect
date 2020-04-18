@@ -1,0 +1,52 @@
+.top-buffer { margin-top:20px; }
+
+.bottom-buffer { margin-bottom: 20px; }
+
+.shadow-animation {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+    transition: 0.15s;
+}
+
+.shadow-animation:hover {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+    transition: 0.15s;
+}
+
+.rotate-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotate {
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
+}
+
+.rotate-container:hover > .rotate {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+
+/*
+.scale-animation {
+    height: 15px;
+    transition: ease-in 0.15s;
+}
+
+.shadow-animation:hover > .scale-animation{
+    height: 20px;
+    transition: ease-in 0.15s;
+}
+
+.shadow-animation:hover > .card-body{
+    padding-top: calc(1.25rem - 5px) !important;
+    transition: ease-in 0.15s;
+}
+
+.card-body{
+    transition: ease-in 0.15s;
+}
+**/
