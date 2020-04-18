@@ -54,7 +54,7 @@ function getRaplaLink(course) {
 
     // Putting the links together
     var link = linkBasic +
-        "&" + linkPieceFile + "=" + course +
+        "&" + linkPieceFile + "=Q2+" + course + "-6" +
         "&" + linkPieceDay + "=" + dayString +
         "&" + linkPieceMonth + "=" + monthString +
         "&" + linkPieceYear + "=" + yearString;
@@ -64,16 +64,14 @@ function getRaplaLink(course) {
 
 /**
  * This function will take a course and redirect to the according courses plan.
+ * 
+ * course will be something like TIT17 or TIM17
  */
 function raplaRedirect(course) {
 
     // Do this for backwards compatibility
     if (course == "TIT" || course == "TIM") {
         course += "17";
-    }
-
-    if (course != "TIM17%2BTIT17" && course != "TIM18%2BTIT18%2BTIS18") {
-        course = "Plan" + course;
     }
 
     window.location.href = getRaplaLink(course);

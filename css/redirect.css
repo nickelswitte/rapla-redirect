@@ -30,6 +30,10 @@
     -webkit-transform: rotate(360deg);
 }
 
+.disabled-card {
+    background-color: #f6f6f6;
+}
+
 /*
 .scale-animation {
     height: 15px;
