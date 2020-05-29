@@ -8,11 +8,6 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- The different css stylings -->
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/redirect.css">
-	<link rel="stylesheet" href="css/redesign.css">
-
 	<!-- Font Awesome-->
 	<link rel="stylesheet" href="lib/font-awesome/css/all.min.css" >
 
@@ -26,11 +21,29 @@
 	<link rel="icon" type="image/png" href="img/favicon.ico" sizes="32x32">
 	<link rel="icon" type="image/png" href="img/favicon.ico" sizes="96x96">
 
+	<!-- The different css stylings -->
+	<link rel="stylesheet" href="css/style.css">
+	<link id="css-dark" rel="stylesheet" href="css/theme-dark.css">
+	<link id="css-light" rel="stylesheet" href="css/theme-light.css">
+
+	<script>
+		// When the local storate is set to dark theme, disable the light theme quickly in order to supress the transition
+		var theme = localStorage.getItem('theme');
+		if (theme == "dark") {
+			document.getElementById("css-light").rel = "stylesheet alternate";
+		}
+	</script>
+
 </head>
 
-<body>
+<body class="body">
 
 	<div class="container">
+
+		<!-- Theme button -->
+		<div id="themeSwitchLink" onclick="toggleTheme();" class="float">
+			<i id="themeSwitchButton" style="font-size: 1.5rem;" class="fas fa-moon my-float"></i>
+		</div>
 
 		<!-- Title -->
 		<div class="row top-buffer">
@@ -38,7 +51,7 @@
 				<h1>DHBW Redirect</h1>
 				<h6>Direkte Links zu allen Plänen des Studiengangs Informatik</h6>
 				<br />
-				<div class="alert alert-dark alert-dismissible fade show">
+				<div id="top-info-alert" class="alert alert-dark alert-dismissible fade show">
 					Klicke auf eine Karte um an den aktuellen Plan zu gelangen oder kopiere den Direktlink für später.
 				</div>
 			</div>
@@ -60,7 +73,7 @@
 					<div class="card shadow-animation" onclick="raplaRedirect('TIT17');" style="cursor: pointer;">
 						<div class="card-color-top" style="background-color: #005baa;">
 							<h5 class="card-title">
-								<i class="fas fa-share"></i> 
+								<i class="fas fa-external-link-alt"></i> 
 								TIT 17
 							</h5>
 						</div>
@@ -76,7 +89,7 @@
 					<div class="card shadow-animation" onclick="raplaRedirect('TIM17');" style="cursor: pointer;">
 						<div class="card-color-top" style="background-color: #0079e2;">
 							<h5 class="card-title">
-								<i class="fas fa-share"></i> 
+								<i class="fas fa-external-link-alt"></i> 
 								TIM 17
 							</h5>
 						</div>
@@ -92,7 +105,7 @@
 					<div class="card unavailable" onclick="" style="cursor: pointer;">
 						<div class="card-color-top" style="background-color: #1c96ff;">
 							<h5 class="card-title">
-								<i class="fas fa-share"></i>
+								<i class="fas fa-external-link-alt"></i>
 								TIT & TIM 17
 							</h5>
 						</div>
@@ -125,7 +138,7 @@
 					<div class="card unavailable" onclick="" style="cursor: pointer;">
 						<div class="card-color-top" style="background-color: #143503;">
 							<h5 class="card-title">
-								<i class="fas fa-share"></i>
+								<i class="fas fa-external-link-alt"></i>
 								TIT 18
 							</h5>
 						</div>
@@ -142,7 +155,7 @@
 					<div class="card unavailable" onclick="" style="cursor: pointer;">
 						<div class="card-color-top" style="background-color: #296a06;">
 							<h5 class="card-title">
-								<i class="fas fa-share"></i>
+								<i class="fas fa-external-link-alt"></i>
 								TIM 18
 							</h5>
 						</div>
@@ -159,7 +172,7 @@
 					<div class="card unavailable" onclick="" style="cursor: pointer;">
 						<div class="card-color-top" style="background-color: #53d50c;">
 							<h5 class="card-title">
-								<i class="fas fa-share"></i>
+								<i class="fas fa-external-link-alt"></i>
 								TIS 18
 							</h5>
 						</div>
@@ -182,7 +195,7 @@
 					<div class="card unavailable" onclick="" style="cursor: pointer;">
 						<div class="card-color-top" style="background-color: #0cd515;">
 							<h5 class="card-title">
-								<i class="fas fa-share"></i>
+								<i class="fas fa-external-link-alt"></i>
 								TIT & TIM & TIS 18
 							</h5>
 						</div>
@@ -198,7 +211,6 @@
 				</div>
 			</div>
 		</div>
-
 
 	</div>
 
@@ -218,6 +230,8 @@
 	
 	<!-- Load the custom rapla js for redirection -->
 	<script src="js/rapla_utils.js"></script>
+
+	<script src="js/theme.js"></script>
 
 
 </body>

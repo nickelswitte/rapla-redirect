@@ -1,51 +1,24 @@
-html, body {
-    height: 100%;
+/* General styles, undependant of theme */
+
+.my-float{
+	margin-top: 13px;
 }
 
-
-.mainBody {
-
-    padding-bottom: 20px;
+.card-color-top {
+    color: white;
 }
 
-#container {
-    padding-top: 20px;
+.top-buffer { margin-top:20px; }
+
+.bottom-buffer { margin-bottom: 20px; }
+
+
+.shadow-animation {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+    transition: 0.15s;
 }
 
-.aLittleMarginBottom {
-    margin-bottom: 1rem;
-}
-
-.testClass {
-    max-width: 100%;
-    height: auto;
-}
-
-.sketchControlDiv > * {
-    /* This will space the children */
-    margin: 0 1.5rem 0 0;
-}
-
-.sketchControlDiv > p {
-    white-space: nowrap;
-}
-
-.sketchControlDiv > div > label {
-    margin-left: 0.33rem;
-}
-
-.sketchControl {
-    
-}
-
-.delink {
-    color: #212529;
-}
-
-.delink:hover {
-    color: #212529;
-}
-
-#headingOne {
-    cursor: pointer;
+.shadow-animation:hover {
+    box-shadow: 0 .25rem 0.5rem rgba(0,0,0,.15) !important;
+    transition: 0.15s;
 }

@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Metropolis Light';
+    src: url('../fonts/metropolis/Metropolis-Light.woff');
+}
+
+@font-face {
+    font-family: 'Metropolis Black';
+    src: url('../fonts/metropolis/Metropolis-Black.woff');
+}
+
+@font-face {
+    font-family: 'Metropolis Medium';
+    src: url('../fonts/metropolis/Metropolis-Medium.woff');
+}
+
+@font-face {
+    font-family: 'Metropolis ExtraLight';
+    src: url('../fonts/metropolis/Metropolis-ExtraLight.woff');
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.link-icons {
+    margin-left: 15px;
+    margin-right: 15px;
+
+    transition: ease 0.4s;
+}
+
+.body {
+    font-family: 'Metropolis Light' !important;
+    /* background-color: #1e272e !important; */
+    background-color: #0d1216 !important;
+    color: #d2dae2 !important;
+
+    transition: 0.25s;
+}
+
+b {
+    font-family: 'Metropolis Medium' !important;
+}
+
+.card {
+    background-color: #112535 !important;
+    color: white !important;
+    border-radius: 10px !important;
+
+    /* transition: 0.25s; */
+}
+
+.card-color-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 1.25rem;
+
+    transition: 0.25s;
+}
+
+.card-body{
+    transition: 0.25s;
+}
+
+.card:hover .card-color-top{
+    padding-bottom: 2rem;
+}
+
+.card:hover .card-body{
+    padding-bottom: 0.5rem;
+}
+
+.card:active .card-color-top{
+    padding-bottom: 3rem;
+}
+
+.card:active .card-body{
+    padding-bottom: 0.25rem;
+    padding-top: 0.5rem;
+}
+
+.card:active {
+    border-color: white;
+    transition: 0.4s;
+    animation: shake 0.4s infinite normal 1s;
+}
+
+.card-color-top .card-title {
+    margin-bottom: 0 !important;
+}
+
+.card.unavailable {
+    opacity: 0.5;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Metropolis Black';
+}
+
+h5.card-title {
+    font-family: 'Metropolis Black' !important;
+}
+
+.float {
+	position:fixed;
+	width:50px;
+	height:50px;
+	top:20px;
+	right:20px;
+	background-color:#888;
+	color:#ccc;
+	border-radius:50px;
+    text-align:center;
+    z-index: 3;
+	/* box-shadow: 2px 2px 3px #999; */
+}
+
+.float:hover {
+    color:#DEDEDE;
+}
+
+#top-info-alert {
+    background-color: #255074;
+    border-color: #255074;
+    color: white;
+
+    transition: 0.25s;
+}

@@ -20,11 +20,22 @@
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="lib/bootstrap-4.3.1-dist/css/bootstrap.min.css">
 
+		<!-- The different css stylings -->
+		<link rel="stylesheet" href="css/style.css">
+		<link id="css-dark" rel="stylesheet" href="css/theme-dark.css">
+		<link id="css-light" rel="stylesheet" href="css/theme-light.css">
 
+		<script>
+			// When the local storate is set to dark theme, disable the light theme quickly in order to supress the transition
+			var theme = localStorage.getItem('theme');
+			if (theme == "dark") {
+				document.getElementById("css-light").rel = "stylesheet alternate";
+			}
+		</script>
 
 	</head>
 
-	<body>
+	<body class="body top-buffer">
 
 		<div class="container">
 			<h1 class="text-center">DHBW Redirect</h1>
