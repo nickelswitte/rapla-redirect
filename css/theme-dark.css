@@ -32,13 +32,6 @@
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-.link-icons {
-    margin-left: 15px;
-    margin-right: 15px;
-
-    transition: ease 0.4s;
-}
-
 .body {
     font-family: 'Metropolis Light' !important;
     /* background-color: #1e272e !important; */
@@ -57,7 +50,7 @@ b {
     color: white !important;
     border-radius: 10px !important;
 
-    /* transition: 0.25s; */
+    transition: 0.25s;
 }
 
 .card-color-top {
@@ -101,6 +94,7 @@ b {
 
 .card.unavailable {
     opacity: 0.5;
+    transition: 0.25s;
 }
 
 h1, h2, h3, h4 {
@@ -118,11 +112,15 @@ h5.card-title {
 	top:20px;
 	right:20px;
 	background-color:#888;
-	color:#ccc;
-	border-radius:50px;
+    color:#ccc;
+    
+    border-radius:50px;
+
     text-align:center;
+
+    box-shadow: 0px 0px 32px 1px rgb(255, 255, 255);
+
     z-index: 3;
-	/* box-shadow: 2px 2px 3px #999; */
 }
 
 .float:hover {
