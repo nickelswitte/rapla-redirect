@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Font Awesome-->
-	<link rel="stylesheet" href="lib/font-awesome/css/all.min.css" >
+	<link rel="stylesheet" href="lib/font-awesome/css/all.min.css">
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="lib/bootstrap-4.3.1-dist/css/bootstrap.min.css">
@@ -42,7 +42,7 @@
 
 		<!-- Theme button -->
 		<div id="themeSwitchLink" onclick="toggleTheme();" class="float">
-			<i id="themeSwitchButton" style="font-size: 1.5rem;" class="fas fa-moon my-float"></i>
+			<i id="themeSwitchButton" style="font-size: 1.5rem;" class="fas fa-moon"></i>
 		</div>
 
 		<!-- Title -->
@@ -69,11 +69,11 @@
 		<div class="row top-buffer">
 			<div class="col-md">
 				<div class="card-deck">
-					
+
 					<div class="card shadow-animation" onclick="raplaRedirect('TIT17');" style="cursor: pointer;">
 						<div class="card-color-top" style="background-color: #005baa;">
 							<h5 class="card-title">
-								<i class="fas fa-external-link-alt"></i> 
+								<i class="fas fa-external-link-alt"></i>
 								TIT 17
 							</h5>
 						</div>
@@ -81,15 +81,15 @@
 							<p class="card-text">
 								Der aktuelle Wochenplan von <b>Informationstechnik 2017</b>.
 							</p>
-							<input class="form-control top-buffer" id="input_tit17" type="text" onclick="event.stopPropagation();this.select();"
-								readonly>
+							<input class="form-control top-buffer" id="input_tit17" type="text"
+								onclick="event.stopPropagation();this.select();" readonly>
 						</div>
 					</div>
 
 					<div class="card shadow-animation" onclick="raplaRedirect('TIM17');" style="cursor: pointer;">
 						<div class="card-color-top" style="background-color: #0079e2;">
 							<h5 class="card-title">
-								<i class="fas fa-external-link-alt"></i> 
+								<i class="fas fa-external-link-alt"></i>
 								TIM 17
 							</h5>
 						</div>
@@ -97,8 +97,8 @@
 							<p class="card-text">
 								Der aktuelle Wochenplan von <b>Mobile Informatik 2017</b>.
 							</p>
-							<input class="form-control top-buffer" id="input_tim17" type="text" onclick="event.stopPropagation();this.select();"
-								readonly>
+							<input class="form-control top-buffer" id="input_tim17" type="text"
+								onclick="event.stopPropagation();this.select();" readonly>
 						</div>
 					</div>
 
@@ -114,8 +114,7 @@
 								Der aktuelle Wochenplan von <b>Informationstechnik & Mobile Informatik 2017</b>.
 							</p>
 							<input class="form-control top-buffer" type="text" onclick="event.stopPropagation();this.select();"
-								value="Currently unavaliable"
-								readonly>
+								value="Currently unavaliable" readonly>
 						</div>
 					</div>
 				</div>
@@ -130,7 +129,7 @@
 			</div>
 		</div>
 
-		
+
 		<!-- Second deck of cards -->
 		<div class="row top-buffer">
 			<div class="col">
@@ -147,8 +146,7 @@
 								Der aktuelle Wochenplan von <b>Informationstechnik 2018</b>.
 							</p>
 							<input class="form-control top-buffer" type="text" onclick="event.stopPropagation();this.select();"
-								value="Currently unavaliable"
-								readonly>
+								value="Currently unavaliable" readonly>
 						</div>
 					</div>
 
@@ -164,8 +162,7 @@
 								Der aktuelle Wochenplan von <b>Mobile Informatik 2018</b>.
 							</p>
 							<input class="form-control top-buffer" type="text" onclick="event.stopPropagation();this.select();"
-								value="Currently unavaliable"
-								readonly>
+								value="Currently unavaliable" readonly>
 						</div>
 					</div>
 
@@ -181,8 +178,7 @@
 								Der aktuelle Wochenplan von <b>IT Security 2018</b>.
 							</p>
 							<input class="form-control top-buffer" type="text" onclick="event.stopPropagation();this.select();"
-								value="Currently unavaliable"
-								readonly>
+								value="Currently unavaliable" readonly>
 						</div>
 					</div>
 				</div>
@@ -204,8 +200,7 @@
 								Der aktuelle Wochenplan von <b>TIT, TIM und TIS 2018</b>.
 							</p>
 							<input class="form-control top-buffer" type="text" onclick="event.stopPropagation();this.select();"
-								value="Currently unavaliable"
-								readonly>
+								value="Currently unavaliable" readonly>
 						</div>
 					</div>
 				</div>
@@ -214,24 +209,21 @@
 
 	</div>
 
-
 	<script>
-		function getRootUrl() {
-			return window.location.host;
-		}
-
 		function setTextOfInputField(id, course) {
-			document.getElementById(id).setAttribute("value", getRootUrl() + "/redirect.html?course=" + course);
+			document.getElementById(id).setAttribute("value", `${window.location.host}/redirect.php?course=${course}`);
 		}
 
 		setTextOfInputField("input_tim17", "TIM17");
 		setTextOfInputField("input_tit17", "TIT17");
 	</script>
-	
+
 	<!-- Load the custom rapla js for redirection -->
 	<script src="js/rapla_utils.js"></script>
 
 	<script src="js/theme.js"></script>
+
+	<script type="text/javascript" src="js/clipboard.js"></script>
 
 
 </body>
